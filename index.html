@@ -16,48 +16,7 @@ body {
     width: 960px;
     height: 5000px;
 }
-.overlay {
-    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox; /* TWEENER - IE 10 */
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-flex-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  position:fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  z-index: 999;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 
-.modal {
-    width: 240px;
-    height: 70px;
-    background: red;
-    margin: 0 auto;
-    padding: 30px 0px 0px 0px;
-}
-
-.amazingButton {
-    display: block;
-    width: 50px;
-    height: 20px;
-    
-    background: #fff;
-    box-shadow: 0px 0px 5px 5px #fff;
-    margin: 0 auto;
-    
-    cursor: pointer;
-}
 </style>
         <div class="container">
             <p>sdflaskdf</p>
@@ -540,31 +499,11 @@ body {
             <p>sdflaskdf</p>
             <p>sdflaskdf</p>
             <p>sdflaskdf</p>
-           </div>
-<div class="overlay">
-            <div class="modal">
-                <span class="amazingButton">PRESS</span>
-            </div>
-        </div> 
-
-		<script>
+        </div>
+	<script>
 $(document).ready(function () {
-    var isLoad = false;
-    
-    $('.modal').css('margin-top', (window.innerHeight / 2) - ($('.modal').height() / 2));
-    
-    $('.amazingButton').click(function(){
-        $('.overlay').hide();
-        $('html, body').css('overflow', 'auto');
-    });
-    
-    $(document).on('scroll', function () {
-        if ($(this).scrollTop() > 500 && !isLoad) {
-            $('body').css('position', 'absolute');
-            $('html, body').css('overflow', 'hidden');
-            $('.overlay').show();
-            isLoad = true;
-        }
+    $('*').bind('touchmove', function (e) {
+      return false;
     });
 });
 		</script>
