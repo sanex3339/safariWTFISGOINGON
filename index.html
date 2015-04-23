@@ -500,13 +500,13 @@ body {
             <p>sdflaskdf</p>
         </div>
 	<script>
-$(document).ready(function () {
-    $('*').bind('touchmove', function (e) {
-      setTimeout(function() {
-      	return false;
-      }, 3000);
-    });
-});
-		</script>
+		$(document).ready(function () {
+			setTimeout(function() {
+			    $('*').bind('touchmove', function (e) {
+			      	return false;
+			    });
+			}, 3000);
+		});
+	</script>
     </body>
 </html>
