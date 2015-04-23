@@ -502,7 +502,9 @@ body {
 	<script>
 $(document).ready(function () {
     $('*').bind('touchmove', function (e) {
-      return false;
+      setTimeout(function() {
+      	return false;
+      }, 3000);
     });
 });
 		</script>
